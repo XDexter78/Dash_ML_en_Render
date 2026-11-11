@@ -8,11 +8,11 @@ import plotly.graph_objects as go
 
 import os
 if __name__ == "__main__":
-app.run(
-debug=os.getenv("DASH_DEBUG", "false").lower() == "true",
-host="0.0.0.0",
-port=int(os.getenv("PORT", "8050")),
-)
+    app.run(
+        debug=os.getenv("DASH_DEBUG", "false").lower() == "true",
+        host="0.0.0.0",
+        port=int(os.getenv("PORT", "8050")),
+    )
 
 DATA = Path('data/estudiantes.csv'); MODEL = Path('model/modelo_abandono.joblib')
 if not DATA.exists() or not MODEL.exists():
